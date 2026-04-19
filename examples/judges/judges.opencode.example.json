@@ -43,7 +43,7 @@
       "run",
       "--pure",
       "--model",
-      "github-copilot/claude-opus-4-6",
+      "github-copilot/claude-opus-4.6",
       "{prompt}"
     ]
   }
