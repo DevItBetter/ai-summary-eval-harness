@@ -1,0 +1,18 @@
+[
+  {
+    "name": "claude-sonnet-4-6",
+    "capture_mode": "stdout_json",
+    "command": [
+      "claude",
+      "--print",
+      "--output-format",
+      "json",
+      "--no-session-persistence",
+      "--disable-slash-commands",
+      "--strict-mcp-config",
+      "--model",
+      "claude-sonnet-4-6",
+      "{prompt}"
+    ]
+  }
+]

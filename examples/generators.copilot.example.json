@@ -1,0 +1,15 @@
+[
+  {
+    "name": "claude-haiku-4-5",
+    "capture_mode": "stdout_json",
+    "command": [
+      "copilot",
+      "--prompt",
+      "{prompt}",
+      "--silent",
+      "--model",
+      "claude-haiku-4.5",
+      "--allow-all-tools"
+    ]
+  }
+]

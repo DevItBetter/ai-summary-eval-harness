@@ -58,8 +58,8 @@ Top-level scripts are compatibility wrappers:
 
 Example configs:
 
-- [generators.example.json](./generators.example.json)
 - [judges.example.json](./judges.example.json)
+- [examples/](./examples/)
 
 Example rubrics:
 
@@ -88,7 +88,7 @@ If your local install uses a different path or wrapper, edit the `command` array
 
 ```bash
 python3 generate_summaries.py /path/to/source_dir \
-  --generators-config ./generators.example.json \
+  --generators-config ./examples/generators.opencode.example.json \
   --rubric-file ./generation_rubric_template.md \
   --outputs-dir /path/to/generated \
   --work-root /path/to/generator_work

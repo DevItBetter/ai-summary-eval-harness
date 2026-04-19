@@ -1,0 +1,13 @@
+[
+  {
+    "name": "gemini-2-5-pro",
+    "capture_mode": "stdout_json",
+    "command": [
+      "gemini",
+      "--prompt",
+      "{prompt}",
+      "--output-format",
+      "json"
+    ]
+  }
+]
