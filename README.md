@@ -91,8 +91,7 @@ python3 generate_summaries.py /path/to/source_dir \
   --generators-config ./generators.example.json \
   --rubric-file ./generation_rubric_template.md \
   --outputs-dir /path/to/generated \
-  --work-root /path/to/generator_work \
-  --force
+  --work-root /path/to/generator_work
 ```
 
 This writes summary markdown files and a generation run log.
@@ -104,8 +103,7 @@ Copy the original `.txt` file into the generated directory if needed, then:
 ```bash
 python3 shuffle_model_names.py /path/to/generated \
   --count 10 \
-  --seed 42 \
-  --force
+  --seed 42
 ```
 
 This writes:
@@ -121,8 +119,7 @@ python3 run_judge_evaluations.py /path/to/generated/review_sets \
   --judges-config ./judges.example.json \
   --rubric-file ./rubric_template.md \
   --results-dir /path/to/results \
-  --work-root /path/to/judge_work \
-  --force
+  --work-root /path/to/judge_work
 ```
 
 This writes one JSON result per judge per review set plus a run log.
@@ -134,8 +131,7 @@ python3 analyze_judge_results.py /path/to/mapping.json /path/to/results \
   --output-dir /path/to/analysis \
   --permutations 5000 \
   --seed 42 \
-  --alpha 0.05 \
-  --force
+  --alpha 0.05
 ```
 
 This writes:
