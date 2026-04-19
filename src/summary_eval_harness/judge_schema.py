@@ -49,6 +49,14 @@ def parse_judge_stdout(stdout: str) -> Any:
                 return json.loads(result_text)
             except json.JSONDecodeError:
                 return top_level
+    if isinstance(top_level, dict) and isinstance(top_level.get("response"), str):
+        # Gemini-style wrappers can place the actual payload in a response field
+        response_text = strip_json_fence(top_level["response"].strip())
+        if response_text:
+            try:
+                return json.loads(response_text)
+            except json.JSONDecodeError:
+                return top_level
     return top_level
 
 
