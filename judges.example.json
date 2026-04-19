@@ -1,0 +1,50 @@
+[
+  {
+    "name": "gpt-5-4",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "openai/gpt-5.4",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "gemini-3.1-pro",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "google-vertex/gemini-3.1-pro-preview",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "glm-5-1",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "zai-coding-plan/glm-5.1",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "claude-opus-4-6",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "github-copilot/claude-opus-4-6",
+      "{prompt}"
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "gpt-5-4-mini",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "openai/gpt-5.4-mini",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "gemini-3-flash-preview",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "github-copilot/gemini-3-flash-preview",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "glm-5-turbo",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "zai-coding-plan/glm-5-turbo",
+      "{prompt}"
+    ]
+  },
+  {
+    "name": "claude-sonnet-4-5",
+    "capture_mode": "stdout_json",
+    "command": [
+      "opencode",
+      "run",
+      "--pure",
+      "--model",
+      "github-copilot/claude-sonnet-4.5",
+      "{prompt}"
+    ]
+  }
+]

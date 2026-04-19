@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging and build outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local app/session artifacts
+.codex
+
+# Generated workflow outputs
+generated_summaries/
+judge_results/
+analysis_output/
+.generator_runs/
+.judge_runs/
+
+# Shuffle outputs
+clean/
+review_sets/
+
+# Generated mapping files
+*_model_shuffle_mapping_*.json
+
+# Ad hoc local JSON configs or logs created during experimentation
+run_log.json
