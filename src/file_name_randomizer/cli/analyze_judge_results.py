@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 from ..analysis.correction import apply_bh_fdr
@@ -20,6 +21,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducible permutation tests.")
     parser.add_argument("--alpha", type=float, default=0.05, help="Significance threshold for raw and FDR-adjusted hypothesis flags.")
     parser.add_argument("--force", action="store_true", help="Overwrite output directory if it exists.")
+    if len(sys.argv) == 1:
+        parser.print_help()
+        raise SystemExit(0)
     return parser.parse_args()
 
 

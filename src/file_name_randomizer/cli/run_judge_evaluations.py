@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 from ..judge_runner import load_judges, run_all_judges
@@ -18,6 +19,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--work-root", type=Path, default=Path(".judge_runs"), help="Root for temporary per-judge workspaces. This directory is recreated on each run.")
     parser.add_argument("--timeout-seconds", type=int, default=900, help="Per-judge timeout in seconds.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing work-root and result directories.")
+    if len(sys.argv) == 1:
+        parser.print_help()
+        raise SystemExit(0)
     return parser.parse_args()
 
 

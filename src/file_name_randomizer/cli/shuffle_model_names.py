@@ -3,13 +3,16 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 from ..shuffle import ShuffleConfig, run_shuffle
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Copy a directory of summary files into sanitized review sets with renamed model suffixes.")
+    parser = argparse.ArgumentParser(
+        description="Create blinded review sets by removing model mentions and shuffling model labels in summary filenames."
+    )
     parser.add_argument("input_dir", type=Path, help="Directory containing one .txt file and summary .md files.")
     parser.add_argument("--count", type=int, default=5, help="Number of deranged review sets to generate in addition to the original control set.")
     parser.add_argument("--seed", type=int, default=None, help="Random seed for reproducible derangement sampling.")
@@ -17,6 +20,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sets-dir", default="review_sets", help="Child directory under the input directory that will hold generated review set subdirectories.")
     parser.add_argument("--mapping-file", type=Path, default=None, help="Optional path for the JSON mapping file. Defaults to the current working directory.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing clean and review-set output directories.")
+    if len(sys.argv) == 1:
+        parser.print_help()
+        raise SystemExit(0)
     return parser.parse_args()
 
 

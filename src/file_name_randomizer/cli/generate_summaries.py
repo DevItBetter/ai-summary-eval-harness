@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 from ..generator_runner import load_generators, run_all_generators
@@ -18,6 +19,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--work-root", type=Path, default=Path(".generator_runs"), help="Root for temporary per-generator workspaces.")
     parser.add_argument("--timeout-seconds", type=int, default=900, help="Per-generator timeout in seconds.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing output and work directories.")
+    if len(sys.argv) == 1:
+        parser.print_help()
+        raise SystemExit(0)
     return parser.parse_args()
 
 
