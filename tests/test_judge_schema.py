@@ -11,7 +11,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.judge_schema import parse_judge_stdout, validate_result_payload
+from summary_eval_harness.judge_schema import parse_judge_stdout, validate_result_payload
 
 
 def valid_payload() -> dict:

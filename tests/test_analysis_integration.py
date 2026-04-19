@@ -12,10 +12,10 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.analysis.correction import apply_bh_fdr
-from file_name_randomizer.analysis.loader import index_mapping_sets, load_joined_rows, load_mapping
-from file_name_randomizer.analysis.reporting import build_markdown_report, prepare_output_dir, write_flat_csv
-from file_name_randomizer.analysis.stats import comparison_table, control_vs_deranged, criterion_control_vs_deranged, descriptive_summary, judge_agreement, label_effects
+from summary_eval_harness.analysis.correction import apply_bh_fdr
+from summary_eval_harness.analysis.loader import index_mapping_sets, load_joined_rows, load_mapping
+from summary_eval_harness.analysis.reporting import build_markdown_report, prepare_output_dir, write_flat_csv
+from summary_eval_harness.analysis.stats import comparison_table, control_vs_deranged, criterion_control_vs_deranged, descriptive_summary, judge_agreement, label_effects
 
 
 class AnalysisIntegrationTests(unittest.TestCase):

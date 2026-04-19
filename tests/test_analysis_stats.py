@@ -10,9 +10,9 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.analysis.correction import apply_bh_fdr
-from file_name_randomizer.analysis.stats import control_vs_deranged, criterion_control_vs_deranged, label_effects
-from file_name_randomizer.types import JoinedRow
+from summary_eval_harness.analysis.correction import apply_bh_fdr
+from summary_eval_harness.analysis.stats import control_vs_deranged, criterion_control_vs_deranged, label_effects
+from summary_eval_harness.types import JoinedRow
 
 
 def sample_rows() -> list[JoinedRow]:

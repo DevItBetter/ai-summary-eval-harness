@@ -11,7 +11,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.generator_schema import parse_generator_stdout, validate_generator_payload
+from summary_eval_harness.generator_schema import parse_generator_stdout, validate_generator_payload
 
 
 class GeneratorSchemaTests(unittest.TestCase):

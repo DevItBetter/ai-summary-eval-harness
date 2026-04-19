@@ -11,7 +11,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.shuffle import find_source_files, sample_derangements, sanitize_text
+from summary_eval_harness.shuffle import find_source_files, sample_derangements, sanitize_text
 
 
 class ShuffleTests(unittest.TestCase):

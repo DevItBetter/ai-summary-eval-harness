@@ -12,7 +12,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.cli.shuffle_model_names import main
+from summary_eval_harness.cli.shuffle_model_names import main
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.generator_runner import load_generators, run_all_generators
+from summary_eval_harness.generator_runner import load_generators, run_all_generators
 
 
 class GeneratorIntegrationTests(unittest.TestCase):
@@ -45,7 +45,7 @@ class GeneratorIntegrationTests(unittest.TestCase):
                 input_dir=input_dir,
                 generators=load_generators(config),
                 rubric_file=rubric,
-                prompt_template_path=ROOT / "src" / "file_name_randomizer" / "templates" / "generator_prompt.txt",
+                prompt_template_path=ROOT / "src" / "summary_eval_harness" / "templates" / "generator_prompt.txt",
                 outputs_dir=root / "outputs",
                 work_root=root / "work",
                 timeout_seconds=30,

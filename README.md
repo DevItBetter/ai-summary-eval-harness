@@ -21,7 +21,7 @@ It supports four stages:
 ## Repository Layout
 
 ```text
-src/file_name_randomizer/
+src/summary_eval_harness/
   cli/                  Thin CLI entry points
   templates/            Prompt templates
   analysis/             Loaders, stats, correction, reporting

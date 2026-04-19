@@ -10,7 +10,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from file_name_randomizer.constants import RUBRIC_KEYS
+from summary_eval_harness.constants import RUBRIC_KEYS
 
 
 class SharedConstantsTests(unittest.TestCase):
